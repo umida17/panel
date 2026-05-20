@@ -1,0 +1,13 @@
+.sidebar{
+    width: 20%;
+    background: purple;
+    height: 100vh;
+}
+.sidebar-cantainer{
+    padding: 30px;
+}
+
+.logo{
+    font-size: 60px;
+    color: white;
+}
