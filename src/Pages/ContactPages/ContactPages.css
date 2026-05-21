@@ -70,3 +70,21 @@
 .action-btn:hover {
   background-color: #2e59d9;
 }
+
+ 
+@media (max-width: 768px) {
+  .contact-page-container {
+    padding: 10px;
+  }
+
+  .contact-table th, 
+  .contact-table td {
+    padding: 12px 10px;  
+    font-size: 14px;   
+  }
+
+  .action-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}

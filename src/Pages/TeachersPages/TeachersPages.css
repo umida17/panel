@@ -8,7 +8,6 @@
   gap: 25px;
 }
 
-/* Har bir o'qituvchi kartochkasi */
 .teacher-card {
   background-color: #ffffff;
   padding: 20px;
@@ -70,17 +69,16 @@
   background-color: #27ae60;
 }
 
-/* StudentPages.css va TeachersPages.css eng pastiga qo'shing */
 
 @media (max-width: 480px) {
   .students-page-container,
   .teachers-page-container {
-    padding: 10px; /* Chekadagi bo'shliqni kamaytiramiz */
+    padding: 10px; 
   }
 
   .students-grid,
   .teachers-grid {
-    grid-template-columns: 1fr; /* Telefonda aniq 1 tadan kartochka chiqadi */
+    grid-template-columns: 1fr; 
     gap: 15px;
   }
   
