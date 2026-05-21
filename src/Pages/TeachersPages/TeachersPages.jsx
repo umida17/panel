@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'  
 import './TeachersPages.css'  
+import { useLang } from "../../LanguageContext.jsx";
 
 const TeachersPages = () => {
   const [teachers, setTeachers] = useState([])
