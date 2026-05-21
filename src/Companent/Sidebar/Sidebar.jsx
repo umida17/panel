@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useLang } from './LanguageContext' 
+import { useLang } from "../../LanguageContext.jsx"; 
 
 const Sidebar = () => {
   const { t } = useLang(); 

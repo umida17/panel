@@ -1,5 +1,5 @@
 import React from 'react'
-import { useLang } from './LanguageContext' 
+import { useLang } from "../../LanguageContext.jsx";
 
 const Header = ({ searchQuery, setSearchQuery }) => {
   const { lang, setLang, t } = useLang();  
