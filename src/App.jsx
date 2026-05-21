@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Students from './Pages/StudentPages/StudentPages';
 import Teachers from './Pages/TeachersPages/TeachersPages';
 import Layout from './Companent/Layout/Layout';
+import { LanguageProvider } from './LanguageContext/LanguageContext';
 
 const App = () => {
   return (
