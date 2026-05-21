@@ -55,7 +55,7 @@ const translations = {
 };
 
 export const LanguageProvider = ({ children }) => {
-  const [lang, setLang] = useState('uz'); // Boshlang'ich til - UZ
+  const [lang, setLang] = useState('uz'); 
 
   const t = (key) => translations[lang][key] || key;
 
