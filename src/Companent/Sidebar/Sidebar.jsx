@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useLang } from './LanguageContext' 
-import { useLang } from "../../LanguageContext.jsx"; 
+ import { useLang } from "../../App.jsx";
 
 const Sidebar = () => {
   const { t } = useLang(); 
@@ -9,7 +8,7 @@ const Sidebar = () => {
   return (
     <div className='sidebar' style={{ padding: '20px', height: '100%' }}>
       <div className='sidebar-cantainer'>
-        <h1 className='logo' style={{ fontSize: '24px', color: '#fff', marginBottom: '30px', textAlign: 'center' }}>
+        <h1 className='logo' style={{ fontSize: '48px', color: 'purple', marginBottom: '30px', textAlign: 'center' }}>
           {t('logo')}
         </h1>
         <ul style={{ listStyle: 'none', padding: 0 }}>

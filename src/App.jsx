@@ -1,25 +1,91 @@
-import React from 'react'
+import React, { createContext, useState, useContext } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
- import Contact from './Pages/ContactPages/ContactPages';
+import Contact from './Pages/ContactPages/ContactPages';
 import Students from './Pages/StudentPages/StudentPages';
 import Teachers from './Pages/TeachersPages/TeachersPages';
 import Layout from './Companent/Layout/Layout';
-import { LanguageProvider } from './LanguageContext/LanguageContext';
 
+ const LanguageContext = createContext();
+
+const translations = {
+  uz: {
+    logo: "Logotip",
+    contactPages: "Kontaktlar",
+    studentsPages: "Talabalar",
+    teachersPages: "O'qituvchilar",
+    searchPlaceholder: "Qidiruv...",
+    downloadCv: "CV yuklab olish",
+    headerText: "Tizim muvaffaqiyatli ishlamoqda. Xush kelibsiz!",
+    noData: "Ma'lumot topilmadi...",
+    profileView: "Profilni ko'rish",
+    smsWrite: "Sms yozish",
+    tableFio: "F.I.Sh",
+    tablePhone: "Telefon",
+    tableEmail: "Email",
+    tableAction: "Amal"
+  },
+  ru: {
+    logo: "Логотип",
+    contactPages: "Контакты",
+    studentsPages: "Студенты",
+    teachersPages: "Учителя",
+    searchPlaceholder: "Поиск...",
+    downloadCv: "Скачать CV",
+    headerText: "Система работает успешно. Добро пожаловать!",
+    noData: "Данные не найдены...",
+    profileView: "Посмотреть профиль",
+    smsWrite: "Написать смс",
+    tableFio: "Ф.И.О",
+    tablePhone: "Телефон",
+    tableEmail: "Эл. адрес",
+    tableAction: "Действие"
+  },
+  en: {
+    logo: "Logo",
+    contactPages: "Contact Pages",
+    studentsPages: "Students Pages",
+    teachersPages: "Teachers Pages",
+    searchPlaceholder: "Search...",
+    downloadCv: "Download CV",
+    headerText: "System is running successfully. Welcome!",
+    noData: "No data found...",
+    profileView: "Profile View",
+    smsWrite: "Write SMS",
+    tableFio: "Full Name",
+    tablePhone: "Phone",
+    tableEmail: "Email",
+    tableAction: "Action"
+  }
+};
+
+export const LanguageProvider = ({ children }) => {
+  const [lang, setLang] = useState('uz'); 
+  const t = (key) => translations[lang][key] || key;
+
+  return (
+    <LanguageContext.Provider value={{ lang, setLang, t }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
+
+export const useLang = () => useContext(LanguageContext);
+
+// 2. Asosiy App komponenti
 const App = () => {
   return (
-       <BrowserRouter>
+    <LanguageProvider>
+      <BrowserRouter>
         <Routes>
-          
           <Route element={<Layout />}>
             <Route path='/Contact' element={<Contact />} />
             <Route path='/Students' element={<Students />} />
             <Route path='/Teachers' element={<Teachers />} />
           </Route>
-         
         </Routes>
       </BrowserRouter>
-   )
+    </LanguageProvider>
+  )
 }
 
 export default App

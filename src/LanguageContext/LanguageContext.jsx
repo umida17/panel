@@ -2,7 +2,7 @@ import React, { createContext, useState, useContext } from 'react';
 
 const LanguageContext = createContext();
 
- const translations = {
+const translations = {
   uz: {
     logo: "Logotip",
     contactPages: "Kontaktlar",
@@ -10,7 +10,7 @@ const LanguageContext = createContext();
     teachersPages: "O'qituvchilar",
     searchPlaceholder: "Qidiruv...",
     downloadCv: "CV yuklab olish",
-    headerText: "Lorem ipsum dolor sit amet... (O'zbekcha matn)",
+    headerText: "Tizim muvaffaqiyatli ishlamoqda. Xush kelibsiz!",
     noData: "Ma'lumot topilmadi...",
     profileView: "Profilni ko'rish",
     smsWrite: "Sms yozish",
@@ -26,7 +26,7 @@ const LanguageContext = createContext();
     teachersPages: "Учителя",
     searchPlaceholder: "Поиск...",
     downloadCv: "Скачать CV",
-    headerText: "Lorem ipsum dolor sit amet... (Русский текст)",
+    headerText: "Система работает успешно. Добро пожаловать!",
     noData: "Данные не найдены...",
     profileView: "Посмотреть профиль",
     smsWrite: "Написать смс",
@@ -42,7 +42,7 @@ const LanguageContext = createContext();
     teachersPages: "Teachers Pages",
     searchPlaceholder: "Search...",
     downloadCv: "Download CV",
-    headerText: "Lorem ipsum dolor sit amet... (English text)",
+    headerText: "System is running successfully. Welcome!",
     noData: "No data found...",
     profileView: "Profile View",
     smsWrite: "Write SMS",
@@ -55,7 +55,6 @@ const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
   const [lang, setLang] = useState('uz'); 
-
   const t = (key) => translations[lang][key] || key;
 
   return (
