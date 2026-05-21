@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
 import './ContactPages.css' 
+import { useLang } from "../../LanguageContext.jsx";
 
 const ContactPages = () => {
   const [contacts, setContacts] = useState([])
@@ -24,8 +25,7 @@ const ContactPages = () => {
         
         <table className="contact-table">
           <thead>
-          // ContactPages.jsx ichidagi th qismlarini shunday o'zgartiring:
-    <thead>
+     <thead>
             <tr>
                 <th>{t('tableFio')}</th>
                 <th>{t('tablePhone')}</th>
