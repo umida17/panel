@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useLang } from './LanguageContext' // Import qilamiz
+import { useLang } from './LanguageContext' 
 
 const Sidebar = () => {
-  const { t } = useLang(); // t funksiyasini olamiz
+  const { t } = useLang(); 
 
   return (
     <div className='sidebar' style={{ padding: '20px', height: '100%' }}>
