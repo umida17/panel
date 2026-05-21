@@ -57,7 +57,6 @@ const translations = {
 export const LanguageProvider = ({ children }) => {
   const [lang, setLang] = useState('uz'); // Boshlang'ich til - UZ
 
-  // Tarjimalarni oson chaqirish uchun qisqa funksiya
   const t = (key) => translations[lang][key] || key;
 
   return (
