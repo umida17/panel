@@ -1,0 +1,71 @@
+ .teachers-page-container {
+  padding: 20px;
+}
+
+ .teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* Har bir o'qituvchi kartochkasi */
+.teacher-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #e9ecef;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+ .teacher-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  border-color: #2ecc71;  
+}
+
+ .teacher-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  background-color: #eee;
+  border: 3px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.teacher-card:hover .teacher-avatar {
+  border-color: #2ecc71;
+}
+
+ .teacher-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0 15px 0;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.teacher-card:hover .teacher-name {
+  color: #2ecc71;
+}
+
+ .teacher-btn {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.teacher-btn:hover {
+  background-color: #27ae60;
+}

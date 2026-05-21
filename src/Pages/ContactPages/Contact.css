@@ -1,0 +1,76 @@
+/* Umumiy sahifa joylashuvi */
+.contact-page-container {
+  padding: 20px;
+}
+
+/* Kontaktlar jadvali uchun o'rab turuvchi div */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e9ecef;
+}
+
+/* Asosiy jadval stili */
+.contact-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 15px;
+}
+
+/* Jadvalning tepa qismi (Tehead) */
+.contact-table th {
+  background-color: #f8f9fa;
+  color: #495057;
+  padding: 16px;
+  font-weight: 600;
+  border-bottom: 2px solid #e9ecef;
+}
+
+ .contact-table td {
+  padding: 16px;
+  border-bottom: 1px solid #e9ecef;
+  color: #333333;
+  vertical-align: middle;
+}
+
+  .contact-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.contact-table tbody tr:hover {
+  background-color: #f1f3f9;  
+}
+
+ .contact-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+  background-color: #eee;
+}
+
+ .contact-profile {
+  display: flex;
+  align-items: center;
+}
+
+ .action-btn {
+  background-color: #4e73df;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+  background-color: #2e59d9;
+}
