@@ -25,7 +25,7 @@ const Header = ({ searchQuery, setSearchQuery }) => {
         <div style={{ display: 'flex', gap: '15px', flex: 1, minWidth: '280px' }}>
           <input 
             type="text" 
-            placeholder={t('searchPlaceholder')} // <--- Dinamik tarjima
+            placeholder={t('searchPlaceholder')}  
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             style={{
@@ -41,12 +41,11 @@ const Header = ({ searchQuery, setSearchQuery }) => {
             backgroundColor: '#4e73df', color: 'white', border: 'none',
             padding: '10px 20px', borderRadius: '8px', fontWeight: '600', cursor: 'pointer'
           }}>
-            {t('downloadCv')} {/* <--- Dinamik tarjima */}
+            {t('downloadCv')}  
           </button>
         </div>
 
-        {/* O'ng tomon: TIL TANLASH TUGMALARI */}
-        <div style={{ display: 'flex', gap: '8px', backgroundColor: '#f1f3f9', padding: '4px', borderRadius: '8px' }}>
+         <div style={{ display: 'flex', gap: '8px', backgroundColor: '#f1f3f9', padding: '4px', borderRadius: '8px' }}>
           {['uz', 'ru', 'en'].map((language) => (
             <button
               key={language}
