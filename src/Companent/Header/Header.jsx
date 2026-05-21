@@ -59,8 +59,7 @@ const Header = ({ searchQuery, setSearchQuery }) => {
                 textTransform: 'uppercase',
                 fontWeight: 'bold',
                 fontSize: '12px',
-                // Aktiv til bo'lsa ko'k rang, bo'lmasa oddiy
-                backgroundColor: lang === language ? '#4e73df' : 'transparent',
+                 backgroundColor: lang === language ? '#4e73df' : 'transparent',
                 color: lang === language ? 'white' : '#495057',
                 transition: 'all 0.2s'
               }}
@@ -73,7 +72,7 @@ const Header = ({ searchQuery, setSearchQuery }) => {
       </div>
 
       <p style={{ fontSize: '13px', color: '#6c757d', margin: 0 }}>
-        {t('headerText')} {/* <--- Dinamik tarjima */}
+        {t('headerText')}  
       </p>
     </div>
   )
