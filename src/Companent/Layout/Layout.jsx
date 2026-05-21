@@ -1,46 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Sidebar from '../Sidebar/Sidebar'
 import { Outlet } from 'react-router-dom'
 import Header from '../Header/Header'
 
 const Layout = () => {
+   const [searchQuery, setSearchQuery] = useState('')
+
   return (
-     <div 
-      className='dashboard-container' 
-      style={{ 
-        display: 'flex', 
-        minHeight: '100vh',
-        backgroundColor: '#f8f9fa',
-        fontFamily: 'sans-serif'
-      }}
-    >
+    <div className='dashboard-container' style={{ display: 'flex', minHeight: '100vh' }}>
       
-       <aside 
-        className='sidebar-container'
-        style={{
-          width: '290px',
-          backgroundColor: '#1c1e27',
-          color: '#ffffff',
-          minHeight: '100vh',
-          boxShadow: '2px 0 5px rgba(0,0,0,0.05)'
-        }}
-      >
-         <Sidebar />
+      <aside className='sidebar-container' style={{ width: '260px', backgroundColor: '#1e1e2f' }}>
+        <Sidebar />
       </aside>
 
-       <div 
-        className='main-content' 
-        style={{ 
-          flex: 1, 
-          display: 'flex', 
-          flexDirection: 'column' 
-        }}
-      >
+      <div className='main-content' style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
         
-         <Header />
+         <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
-         <main style={{ padding: '20px', flex: 1 }}>
-          <Outlet />
+        <main style={{ padding: '20px', flex: 1 }}>
+           <Outlet context={{ searchQuery }} />
         </main>
 
       </div>

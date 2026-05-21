@@ -1,0 +1,78 @@
+/* Umumiy sahifa joylashuvi */
+.students-page-container {
+  padding: 20px;
+}
+
+/* Kartochkalar uchun Grid setka */
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* Har bir talaba kartochkasi */
+.student-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #e9ecef;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+  /* Silliq animatsiya (transform va soya uchun) */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* --- HOVER EFFEKTI (Sichqoncha kelganda tepaga ko'tarilishi) --- */
+.student-card:hover {
+  transform: translateY(-8px); /* 8px tepaga ko'tariladi */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12); /* Soya kuchayadi */
+  border-color: #4e73df; /* Chegirmasi ko'k rang bo'ladi */
+}
+
+/* Talaba rasmi */
+.student-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  background-color: #eee;
+  border: 3px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.student-card:hover .student-avatar {
+  border-color: #4e73df; /* Hover bo'lganda rasm atrofi ko'k bo'ladi */
+}
+
+/* Talaba ismi */
+.student-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0 15px 0;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.student-card:hover .student-name {
+  color: #4e73df; /* Hover bo'lganda ism ham ko'k bo'ladi */
+}
+
+/* Profil tugmasi */
+.student-btn {
+  background-color: #4e73df;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.student-btn:hover {
+  background-color: #2e59d9; /* Tugma ustiga kelgandagi to'qroq ko'k */
+}

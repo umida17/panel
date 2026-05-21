@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Header = () => {
+const Header = ({ searchQuery, setSearchQuery }) => {
   return (
     <div style={{
       backgroundColor: '#ffffff',
@@ -9,51 +9,41 @@ const Header = () => {
       boxShadow: '0 2px 4px rgba(0, 0, 0, 0.02)'
     }}>
       
-      {/* Elementlar qatori: Endi hamma narsa tartib bilan chapdan joylashadi */}
-      <div 
-        className="header-container"
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          flexWrap: 'wrap',
-          gap: '20px', // Input va Tugma orasidagi masofa
-          marginBottom: '16px'
-        }}
-      >
-        {/* Input stili */}
-        <input 
+      <div className="header-container" style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '20px',
+        marginBottom: '16px'
+      }}>
+         <input 
           type="text" 
-          placeholder="Qidiruv..."
+          placeholder="Ism bo'yicha qidiruv..."
+          value={searchQuery} // Statening qiymati
+          onChange={(e) => setSearchQuery(e.target.value)} // Yozilganda stateni o'zgartiradi
           style={{
-            width: '500px',
+            width: '300px',
             padding: '10px 16px',
-            border: '1px solid #aec7e0',
+            border: '1px solid #ced4da',
             borderRadius: '8px',
             fontSize: '14px',
             outline: 'none'
           }}
         />
 
-        {/* Tugma stili (Inputning srazu yonida turadi) */}
-        <button 
-          className='header-btn'
-          style={{
-            backgroundColor: '#4e73df',
-            color: 'white',
-            border: 'none',
-            padding: '10px 20px',
-            borderRadius: '8px',
-            fontSize: '14px',
-            fontWeight: '600',
-            cursor: 'pointer',
-            display: 'block' // Ko'rinishini kafolatlash uchun
-          }}
-        >
+        <button className='header-btn' style={{
+          backgroundColor: '#4e73df',
+          color: 'white',
+          border: 'none',
+          padding: '10px 20px',
+          borderRadius: '8px',
+          fontSize: '14px',
+          fontWeight: '600',
+          cursor: 'pointer'
+        }}>
           Download CV
         </button>
       </div>
-
-       
+ 
 
     </div>
   )
