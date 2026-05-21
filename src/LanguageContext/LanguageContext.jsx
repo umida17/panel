@@ -2,8 +2,7 @@ import React, { createContext, useState, useContext } from 'react';
 
 const LanguageContext = createContext();
 
-// Barcha sahifalar uchun tarjimalar bazasi
-const translations = {
+ const translations = {
   uz: {
     logo: "Logotip",
     contactPages: "Kontaktlar",
