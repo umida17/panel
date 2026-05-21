@@ -24,12 +24,18 @@ const ContactPages = () => {
         
         <table className="contact-table">
           <thead>
+          // ContactPages.jsx ichidagi th qismlarini shunday o'zgartiring:
+    <thead>
             <tr>
-              <th>F.I.Sh (Ism)</th>
-              <th>Telefon raqam</th>
-              <th>Email Profil</th>
-              <th>Amal</th>
+                <th>{t('tableFio')}</th>
+                <th>{t('tablePhone')}</th>
+                <th>{t('tableEmail')}</th>
+                <th>{t('tableAction')}</th>
             </tr>
+            </thead>
+
+ 
+    <button className="action-btn">{t('smsWrite')}</button>
           </thead>
           <tbody>
             

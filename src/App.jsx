@@ -5,10 +5,11 @@ import Contact from './Pages/ContactPages/ContactPages';
 import Students from './Pages/StudentPages/StudentPages';
 import Teachers from './Pages/TeachersPages/TeachersPages';
 import Layout from './Companent/Layout/Layout';
+import { LanguageContex } from './LanguageContext/LanguageContext';
 
 const App = () => {
   return (
-    <LanguageProvider>  
+    <LanguageContex>  
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>
@@ -18,7 +19,7 @@ const App = () => {
           </Route>
         </Routes>
       </BrowserRouter>
-    </LanguageProvider>
+    </LanguageContex>
   )
 }
 
