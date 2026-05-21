@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { LanguageProvider } from './LanguageContext' // Import qildik
+import { LanguageProvider } from './LanguageContext' 
 import Contact from './Pages/ContactPages/ContactPages';
 import Students from './Pages/StudentPages/StudentPages';
 import Teachers from './Pages/TeachersPages/TeachersPages';
