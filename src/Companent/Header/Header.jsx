@@ -1,8 +1,8 @@
 import React from 'react'
-import { useLang } from './LanguageContext' // Contextni uladik
+import { useLang } from './LanguageContext' 
 
 const Header = ({ searchQuery, setSearchQuery }) => {
-  const { lang, setLang, t } = useLang(); // Til sozlamalarini oldik
+  const { lang, setLang, t } = useLang();  
 
   return (
     <div style={{
@@ -15,14 +15,13 @@ const Header = ({ searchQuery, setSearchQuery }) => {
       <div className="header-container" style={{
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'space-between', // Ikki chekkaga suradi
+        justifyContent: 'space-between',  
         flexWrap: 'wrap',
         gap: '20px',
         marginBottom: '16px'
       }}>
         
-        {/* Chap tomon: Input va Tugma */}
-        <div style={{ display: 'flex', gap: '15px', flex: 1, minWidth: '280px' }}>
+         <div style={{ display: 'flex', gap: '15px', flex: 1, minWidth: '280px' }}>
           <input 
             type="text" 
             placeholder={t('searchPlaceholder')}  
