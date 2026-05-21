@@ -1,3 +1,34 @@
 .cards{
     display: flex;
 }
+
+/* Layout.css faylining eng tagiga qo'shing */
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column; /* Yonma-yon emas, ustma-ust tushadi */
+  }
+
+  .sidebar-wrapper, 
+  .sidebar-container {
+    width: 100% !important; /* Sidebar butun ekranni egallaydi */
+    min-height: auto !important; /* Bo'yi ekranga qarab moslashadi */
+    position: static !important; /* Tepada qotib turmaydi */
+    padding: 15px !important;
+  }
+
+  .sidebar-container ul {
+    display: flex; /* Menyularni yonma-yon qilish uchun */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .sidebar-container ul li {
+    margin-bottom: 0 !important; /* Masofani yo'qotamiz */
+  }
+
+  .main-content {
+    width: 100%;
+  }
+}

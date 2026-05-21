@@ -45,7 +45,25 @@ const Header = ({ searchQuery, setSearchQuery }) => {
       </div>
  
 
+        <input 
+        type="text" 
+        placeholder="Qidiruv..."
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        style={{
+            width: '100%',        
+            maxWidth: '300px',     
+            padding: '10px 16px',
+            border: '1px solid #ced4da',
+            borderRadius: '8px',
+            fontSize: '14px',
+            outline: 'none'
+        }}
+/>
+
     </div>
+
+    
   )
 }
 

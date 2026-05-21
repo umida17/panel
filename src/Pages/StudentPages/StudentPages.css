@@ -76,3 +76,23 @@
 .student-btn:hover {
   background-color: #2e59d9; /* Tugma ustiga kelgandagi to'qroq ko'k */
 }
+
+/* StudentPages.css va TeachersPages.css eng pastiga qo'shing */
+
+@media (max-width: 480px) {
+  .students-page-container,
+  .teachers-page-container {
+    padding: 10px; /* Chekadagi bo'shliqni kamaytiramiz */
+  }
+
+  .students-grid,
+  .teachers-grid {
+    grid-template-columns: 1fr; 
+    gap: 15px;
+  }
+  
+  .student-card,
+  .teacher-card {
+    padding: 15px;
+  }
+}

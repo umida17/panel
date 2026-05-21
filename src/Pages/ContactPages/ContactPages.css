@@ -1,10 +1,8 @@
-/* Umumiy sahifa joylashuvi */
-.contact-page-container {
+ .contact-page-container {
   padding: 20px;
 }
 
-/* Kontaktlar jadvali uchun o'rab turuvchi div */
-.table-responsive {
+ .table-responsive {
   width: 100%;
   overflow-x: auto;
   background-color: #ffffff;
@@ -13,16 +11,14 @@
   border: 1px solid #e9ecef;
 }
 
-/* Asosiy jadval stili */
-.contact-table {
+ .contact-table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
   font-size: 15px;
 }
 
-/* Jadvalning tepa qismi (Tehead) */
-.contact-table th {
+ .contact-table th {
   background-color: #f8f9fa;
   color: #495057;
   padding: 16px;
